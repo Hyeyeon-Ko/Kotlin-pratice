@@ -3,7 +3,6 @@ package com.example.goodwords
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import androidx.databinding.DataBindingUtil
 import com.example.goodwords.databinding.ActivityMainBinding
 

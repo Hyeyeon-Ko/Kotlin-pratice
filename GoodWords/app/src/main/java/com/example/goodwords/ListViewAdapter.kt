@@ -25,7 +25,8 @@ class ListViewAdapter(val List : MutableList<String>) : BaseAdapter() {
         var convertView = convertView
 
         if (convertView == null) {
-            convertView = LayoutInflater.from(parent?.context).inflate(R.layout.listview_item, parent, false)
+            convertView =
+                LayoutInflater.from(parent?.context).inflate(R.layout.listview_item, parent, false)
         }
 
         val listviewText = convertView?.findViewById<TextView>(R.id.listViewTextArea)
@@ -34,6 +35,4 @@ class ListViewAdapter(val List : MutableList<String>) : BaseAdapter() {
         return convertView!!
 
     }
-
-
 }

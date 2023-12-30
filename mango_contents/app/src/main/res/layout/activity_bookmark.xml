@@ -5,22 +5,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".BookmarkActivity">
 
-    <!--  Bookmark 버튼 생성  -->
+    <!--  북마크 title 설정  -->
     <TextView
-        android:id="@+id/bookmarkBtn"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:text="북마크"
-        android:textSize="15sp"
-        android:textColor="@color/black"
         android:textStyle="bold"
-        android:layout_margin="15dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!--  RecyclerView 생성  -->
+    <!--  북마크 내의 RecyclerView 설정  -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv"
         android:layout_marginTop="50dp"

@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".SplashActivity">
 
+    <!--  첫 화면에 띄울 로고  -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

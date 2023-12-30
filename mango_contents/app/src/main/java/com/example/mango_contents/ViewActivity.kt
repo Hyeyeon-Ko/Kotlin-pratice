@@ -9,7 +9,7 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 
-class ViewActivity : AppCompatActivity() {
+class ViewActivity : AppCompatActivity() { // Main에서 item 클릭 후 들어간 화면
 
     private lateinit var auth: FirebaseAuth
 
@@ -23,7 +23,6 @@ class ViewActivity : AppCompatActivity() {
         val webView = findViewById<WebView>(R.id.webView)
         webView.loadUrl(intent.getStringExtra("url").toString())
 
-        // Write a message to the database
         val database = Firebase.database
         val myBookmarkRef = database.getReference("bookmark_ref")
 
@@ -31,6 +30,8 @@ class ViewActivity : AppCompatActivity() {
         val imageUrl = intent.getStringExtra("imageUrl").toString()
         val title = intent.getStringExtra("title").toString()
 
+        // 북마크 저장 기능
+        // DB에 url, imageUrl, title 전부 저장
         val saveText = findViewById<TextView>(R.id.saveText)
         saveText.setOnClickListener {
             myBookmarkRef

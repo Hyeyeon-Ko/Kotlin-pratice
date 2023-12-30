@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".ViewActivity">
 
+    <!--  저장 버튼 text로 생성  -->
     <TextView
         android:id="@+id/saveText"
         android:layout_width="wrap_content"
@@ -16,7 +17,8 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-    
+
+    <!--  Web 띄우는 부분  -->
     <WebView
         android:layout_marginTop="50dp"
         android:id="@+id/webView"

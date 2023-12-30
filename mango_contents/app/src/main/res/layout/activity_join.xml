@@ -8,6 +8,7 @@
     android:orientation="vertical"
     tools:context=".JoinActivity">
 
+    <!--  email 입력칸  -->
     <EditText
         android:id="@+id/emailArea"
         android:layout_margin="20dp"
@@ -15,6 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp" />
 
+    <!--  password 입력칸  -->
     <EditText
         android:id="@+id/passwordArea"
         android:layout_margin="20dp"
@@ -22,6 +24,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp" />
 
+    <!--  회원가입 버튼  -->
     <Button
         android:id="@+id/joinBtn"
         android:layout_margin="20dp"

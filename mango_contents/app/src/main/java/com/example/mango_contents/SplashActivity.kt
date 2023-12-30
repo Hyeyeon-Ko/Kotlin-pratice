@@ -9,7 +9,7 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
 @Suppress("DEPRECATION")
-class SplashActivity : AppCompatActivity() {
+class SplashActivity : AppCompatActivity() { // Splash 처음 진입 화면 설정
 
     private lateinit var auth: FirebaseAuth
 
@@ -21,13 +21,13 @@ class SplashActivity : AppCompatActivity() {
         auth = Firebase.auth
 
         if (auth.currentUser?.uid == null) {
-            // 회원가입이 안되어있으므로 joinActivity
+            // 회원가입이 안되어 있으면, joinActivity로
             Handler().postDelayed({
                 startActivity(Intent(this, JoinActivity::class.java))
                 finish()
             }, 3000)
         } else {
-            // 회원가입이 되어있으므로 MainActivity
+            // 회원가입이 되어 있으면, MainActivity로
             Handler().postDelayed({
                 startActivity(Intent(this, MainActivity::class.java))
                 finish()

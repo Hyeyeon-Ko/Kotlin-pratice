@@ -48,9 +48,12 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
+    // firebase 연결
     implementation(platform("com.google.firebase:firebase-bom:32.7.0"))
     implementation("com.google.firebase:firebase-analytics-ktx")
+    // firebase - auth 사용
     implementation("com.google.firebase:firebase-auth-ktx")
+    // firebase - realtime database 사용
     implementation("com.google.firebase:firebase-database-ktx")
 
 }

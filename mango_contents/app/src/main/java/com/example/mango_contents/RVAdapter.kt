@@ -17,6 +17,7 @@ class RVAdapter(val context : Context, val List : MutableList<ContentsModel>) : 
         return ViewHolder(v)
     }
 
+    // recyclerview는 click 기능을 직접 구현해야 함
     interface ItemClick {
         fun onClick(view : View, position: Int)
     }
@@ -42,7 +43,10 @@ class RVAdapter(val context : Context, val List : MutableList<ContentsModel>) : 
             val rv_text = itemView.findViewById<TextView>(R.id.rvTextArea)
             val rv_img = itemView.findViewById<ImageView>(R.id.rvImageArea)
 
+            // rv_text에 이름 받아오기
             rv_text.text = item.titleText
+
+            // rv_img에 imageUrl 넣어주기
             Glide.with(context)
                 .load(item.imageUrl)
                 .into(rv_img)

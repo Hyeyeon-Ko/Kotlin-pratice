@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity() { // item들 나열 되어있는 MainActivity
 
     private val items = mutableListOf<ContentsModel>()
 
@@ -113,11 +113,15 @@ class MainActivity : AppCompatActivity() {
             )
         )
 
+        // recyclerview와 Adapter 연결
         val recyclerview = findViewById<RecyclerView>(R.id.rv)
         val rvAdapter = RVAdapter(baseContext, items)
 
         recyclerview.adapter = rvAdapter
 
+        // item 클릭시
+        // 1) ViewActivity로(해당 url)
+        // 2) putExtra로 세가지 값 집어넣기
         rvAdapter.itemClick = object : RVAdapter.ItemClick {
             override fun onClick(view: View, position: Int) {
 
@@ -130,6 +134,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        // 두줄씩 띄우기
         recyclerview.layoutManager = GridLayoutManager(this, 2)
 
     }

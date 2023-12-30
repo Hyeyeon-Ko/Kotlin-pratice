@@ -123,6 +123,8 @@ class MainActivity : AppCompatActivity() {
 
                 val intent = Intent(baseContext, ViewActivity::class.java)
                 intent.putExtra("url", items[position].url)
+                intent.putExtra("imageUrl", items[position].imageUrl)
+                intent.putExtra("title", items[position].titleText)
                 startActivity(intent)
 
             }
